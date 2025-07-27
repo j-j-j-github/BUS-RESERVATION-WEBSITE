@@ -1,0 +1,119 @@
+
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Booking</h2>
+                    </div>
+                    <div class="col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Location Start -->
+<center>
+                    <div class="col-lg-5">
+                        <div class="location-form">
+                            <h3>Booking</h3>
+                            <form action="bookingbus" method="POST">
+							  {% csrf_token %}
+{{form.as_p}}
+
+                                    
+								                                <div class="control-group">Seat Number
+                                    <input type="text" class="form-control" readonly name="seat_id" value="{{res.seatnumber}}" placeholder="seat_id" required="required" />
+                                </div>
+								
+								
+								  <div class="control-group">	Bus Name
+                                    <input type="text" class="form-control"  name="bustitle" value="{{res1.bustitle}}" placeholder="Bus" readonly />
+                                </div> <br>                             
+								
+								<div class="control-group">
+                                    <input type="text" class="form-control" name="passenger_firstname" placeholder="First Name" required="required" />
+                                </div>
+								<br>
+								
+								<div class="control-group">
+                                    <input type="text" class="form-control" name="passenger_lastname" placeholder="Last Name" required="required" />
+                                </div>
+								<br>
+                                <!-- <div class="control-group">
+                                    <input type="text" class="form-control" name="noof_paasenger" placeholder="Total passengers" required="required" />
+                                </div> -->
+								
+								<br>
+								<div class="control-group">Starting Point
+                                    <input type="text" class="form-control" name="startingpoint" value="{{res1.startingpoint}}" placeholder="Your start point" readonly />
+                                </div>
+								
+								
+								<div class="control-group">Ending Point
+                                    <input type="text" class="form-control" name="endingpoint" value="{{res1.endingpoint}}" placeholder="Your destination point" readonly />
+                                </div>
+								
+								
+								<div class="control-group">Amount Per Seat
+                                    <input type="text" class="form-control" name="amount" value="{{res1.amountperseat}}" placeholder="Total amount" readonly />
+                                </div>
+								
+								
+								<div class="control-group">
+                                    <input type="hidden" class="form-control" value="pending" name="status" placeholder="Status" required="required" />
+                                </div>
+                                	
+								<div class="control-group">
+                                    <input type="hidden" class="form-control" value="{{res2}}" name="uid" placeholder="Status" required="required" />
+                                </div>
+                                <div>
+                                    <button class="btn btn-custom" name="submit" type="submit">Book</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div></center>
+                </div>
+            </div>
+        </div>
+        <!-- Location End -->
+        
+        
+        <!-- Footer Start -->
+       {% include 'footer.html' %}
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'mail/contact.js '%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,138 @@
+{% load static %}
+{% block content %}
+
+{% include 'admin/menu.html' %}
+
+         <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+               
+              </div>
+            </div>
+            <!-- Quick Action Toolbar Ends-->
+           <div class="row">
+              <div class="col-md-12 grid-margin">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="d-sm-flex align-items-baseline report-summary-header">
+                          <h5 class="font-weight-semibold"></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row report-inner-cards-wrapper">
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'busesss' %}" style="color: black;">ADD BUS</a></h4>
+                        </div>
+                        <div class="inner-card-icon" style="background-color:#008ECC">
+                          <i class="fa fa-bus"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'typezzz' %}" style="color: black;">BUS TYPE </a></h4>
+                        </div>
+                         <div class="inner-card-icon" style="background-color:#00a9d4">
+                          <i class="fa fa-list"></i>
+                        </div>
+                      </div>
+                      
+                      </div>
+					     <div class="row report-inner-cards-wrapper">
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'placezz' %}" style="color: black;">ADD PLACE</a></h4>
+                        </div>
+                        <div class="inner-card-icon" style="background-color:#008ECC">
+                          <i class="fa fa-map-marker"></i>
+                        </div>
+                      </div>
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{%url 'routezzz' %}" style="color: black;">ADD ROUTE</a></h4>
+                        </div>
+                        <div class="inner-card-icon" style="background-color:#008ECC">
+                          <i class="fa fa-road"></i>
+                        </div>
+                      </div>
+                      
+                      </div>  
+					  <div class="row report-inner-cards-wrapper">
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'seatsss' %}" style="color: black;">ADD SEAT</a></h4>
+                        </div>
+                        <div class="inner-card-icon" style="background-color:#008ECC">
+                          <i class="fa fa-user"></i>
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'faresss' %}" style="color: black;">ADD FARE</a></h4>
+                        </div>
+                         <div class="inner-card-icon" style="background-color:#00a9d4">
+                          <i class="fa fa-money"></i>
+                        </div>
+                      </div>
+                      
+                      </div>
+					     <div class="row report-inner-cards-wrapper">
+                      <div class=" col-md -6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'bookviews' %}" style="color: black;">VIEW BOOKING</a></h4>
+                        </div>
+                        <div class="inner-card-icon" style="background-color:#008ECC">
+                          <i class="fa fa-book"></i>
+                        </div>
+						
+						
+						
+                      </div>
+                      <div class="col-md-6 col-xl report-inner-card">
+                        <div class="inner-card-text">
+                          <h4><a class="navbar-brand" href="{% url 'paymentview' %}" style="color: black;">VIEW PAYMENT</a></h4>
+                        </div>
+                         <div class="inner-card-icon" style="background-color:#00a9d4">
+                          <i class="fa fa-handshake-o"></i>
+                        </div>
+                      </div>
+                      
+                      </div>
+					  
+					  
+					    <div class="row report-inner-cards-wrapper">
+
+                      <div class="col-md-6 col-xl report-inner-card">
+                        
+                      </div>
+                      
+                      </div>
+					  
+					  
+					  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    {% include 'admin/footer.html' %}
+    {% endblock %}

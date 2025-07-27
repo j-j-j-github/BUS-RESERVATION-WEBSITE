@@ -1,0 +1,106 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2> VIEW PAYMENT</h2>
+                    </div>
+                    <div class="col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+               
+                <div class="row">
+                    
+                    <div class="col-md-12">
+    <table class="table" border="1">
+                      <thead>
+                        <tr>
+                          <th> Bus Title </th>
+                          <th> Passenger Name </th>
+                          <!-- <th>No of Passenger </th> -->
+                          <th>  Date</th>
+                          <th>Payment Type</th>
+                            
+							<th>CCV No</th>
+							<th>Card No</th>
+							<th>Exp Date</th>
+							<th>Amount</th>
+							<th>Status</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                      {% for i in res %}
+                        <tr>
+                          <td class="py-1">
+                            {{i.bustitle}}
+                          </td>
+                          <td>{{i.passenger_firstname}}</td>
+                           <!-- <td>{{i.noof_passenger}}</td> -->
+                          <td>{{i.date}} </td>
+                         
+                            <td>{{i.payment_type}} </td>
+                            <td>{{i.ccvno}} </td>
+                            <td>{{i.cardno}} </td>
+                            <td>{{i.expdate}} </td>
+                            <td>{{i.amount}} </td>
+                            <td>{{i.status}} </td>
+                          
+						                            
+
+                        </tr>
+{% endfor %}
+                      </tbody>
+                    </table>
+
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </DIV>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+{% include 'footer.html' %}
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+ 
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
+{% endblock %}

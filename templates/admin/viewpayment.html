@@ -1,0 +1,110 @@
+{% load static %}
+{% block content %}
+
+{% include 'admin/menu.html' %}
+
+
+         <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+
+              </div>
+            </div>
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"> VIEW PAYMENT </h3>
+            </div>
+
+              <div class="col-12 grid-margin">
+                <div class="">
+                  <div class="card-body" >
+                    <h4 class="card-title"></h4>
+                    <table class="table" border="1">
+                      <thead>
+                        <tr>
+                          <th> <B>Bus Title</B></th>
+                          <th> <B>Passenger Name</B> </th>
+                          <th><B>No of Paasenger</B></th>
+                          <th> <B> Date</B></th>
+                          <th><B>Payment Type</B></th>
+                            
+							<th><B>ccv No</B></th>
+							<th><B>Card No</B></th>
+							<th><B>Exp Date</B></th>
+							<th><B>Amount</B></th>
+							<th><B>Status</B></th>
+							<th><B>User Name</B></th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                      {% for i in res %}
+                        <tr>
+                          <td class="py-1">
+                            {{i.bustitle}}
+                          </td>
+                          <td>{{i.passenger_firstname}}</td>
+                            <td>{{i.noof_paasenger}}</td>
+                          <td>{{i.date}} </td>
+                         
+                            <td>{{i.payment_type}} </td>
+                            <td>{{i.ccvno}} </td>
+                            <td>{{i.cardno}} </td>
+                            <td>{{i.expdate}} </td>
+                            <td>{{i.amount}} </td>
+                            <td>{{i.status}} </td>
+                            <td>{{i.uid}} </td>
+                          
+						                            
+
+                        </tr>
+{% endfor %}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+          <!-- content-wrapper ends -->
+          <!-- partial:../../partials/_footer.html -->
+          </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+          </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="{% static 'admin/vendors/js/vendor.bundle.base.js' %}"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="{% static 'admin/vendors/chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'admin/vendors/moment/moment.min.js' %}"></script>
+    <script src="{% static 'admin/vendors/daterangepicker/daterangepicker.js' %}"></script>
+    <script src="{% static 'admin/vendors/chartist/chartist.min.js' %}"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="{% static 'admin/js/off-canvas.js' %}"></script>
+    <script src="{% static 'admin/js/misc.js' %}"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="{% static 'admin/js/dashboard.js' %}"></script>
+    <!-- End custom js for this page -->
+
+           <div>
+             <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © Sahla TK.com 2022</span>
+            </div>
+          </footer>
+          <!-- partial -->
+        </div>
+
+  {% endblock %}
+  </body>
+</html>

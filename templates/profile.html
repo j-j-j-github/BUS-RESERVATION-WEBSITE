@@ -1,0 +1,96 @@
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>  PROFILE</h2>
+                    </div>
+                    <div class="col-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+               
+                <div class="row">
+                    <div class="col-md-4">
+                        
+                    </div>
+                    <div class="col-md-7">
+                        <div class="contact-form">
+                            <div id="success"></div>
+							<div>
+ <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6">
+                    <div class="singel-products mt-30">
+                       
+                        <div class="products-contant">
+                            <h6 class="products-title"><a href="#"><B>First Name</B>:{{result.firstname}}</a></h6>
+                            <div class="price-rating d-flex justify-content-between">
+                                <div class="price">
+								
+								    <span class="regular-price"><B>Last Name</B>:{{result.lastname}}</span><BR><BR>
+
+                                    <span class="regular-price"><B>Place</B>:{{result.place}}</span><BR><BR>
+                                    <span class="regular-price"><B>Phone</B>:{{result.phone}}</span><br><br>
+                                    <span class="regular-price"><B>Email</B> :{{result.email}}</span><br><br>
+                                    <span class="regular-price"><B>Username</B> :{{result.username}}</span><br><br>
+                                    
+									
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+               
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+		</DIV></DIV>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+{% include 'footer.html' %}
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+ 
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
+{% endblock %}

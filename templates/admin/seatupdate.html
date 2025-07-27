@@ -1,0 +1,94 @@
+{% load static %}
+{% block content %}
+
+{% include 'admin/menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+               
+              </div>
+            </div>
+           <center> <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">UPDATE SEAT</h4>
+                    <form class="forms-sample"  method="post" action="editseat/{{result.id}}" enctype="multipart/form-data">
+                        {% csrf_token %}
+{{form.as_p}}
+
+                      <div class="form-group row">
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Bus</label>
+                        <div class="col-sm-9">
+						
+						<select name="bus_id" class="form-control">
+			  				<option value="{{result.bus_id}}">{{result.bus_id}}</option>
+
+				{% for i in res %}					
+				<option value="{{i.id}}">{{i.bustitle}}</option>
+						
+						
+						{% endfor %}
+						</select>           
+						
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Seat Number</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" value="{{result.seatnumber}}" id="exampleInputid"  required  name="seatnumber">
+                        </div>
+                      </div>
+                    
+                      
+					   <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label"></label>
+                        <div class="col-sm-9">
+                          <input type="HIDDEN" class="form-control" id="exampleInputid" required value="available" name="seatstatus">
+                        </div>
+                      </div>
+                     
+					  
+                      
+                        <!---<div class="form-group row">
+                        <label for="exampleInputqua" class="col-sm-3 col-form-label">Public key</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" required id="exampleInputid" name="public_key">
+                        </div>
+                      </div>
+                         <div class="form-group row">
+                        <label for="exampleInputqua" class="col-sm-3 col-form-label">Private key</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputid" required name="private_key">
+                        </div>
+                      </div>!-->
+
+                      <button type="submit" class="btn btn-primary mr-2" >Submit</button>
+
+                    </form>
+                  </div>
+                </div>
+              </div></center>
+     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+ {% include 'admin/footer.html' %}
+
+    {% endblock %}

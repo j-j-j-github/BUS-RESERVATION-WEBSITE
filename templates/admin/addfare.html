@@ -1,0 +1,97 @@
+{% load static %}
+{% block content %}
+
+{% include 'admin/menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row purchace-popup">
+              <div class="col-12 stretch-card grid-margin">
+               
+              </div>
+            </div>
+           <center> <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">ADD RATE</h4>
+                    <form class="forms-sample"  method="post" action="addfare" enctype="multipart/form-data">
+                        {% csrf_token %}
+{{form.as_p}}
+
+                      <div class="form-group row">
+                      </div>
+					  
+					   <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Bus</label>
+                        <div class="col-sm-9">
+						<select name="bustitle" class="form-control">
+				{% for i in res %}					
+				<option value="{{i.bustitle}}">{{i.bustitle}}</option>
+						
+						
+						{% endfor %}
+						</select>
+                        </div>
+                      </div>
+                     
+					  
+                      <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Departure</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputid"  required  name="startingpoint">
+                        </div>
+                      </div>
+                     
+                     
+                     <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Destination</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputid"  required  name="endingpoint">
+                        </div>
+                      </div>
+                    
+                      <div class="form-group row">
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Rate per seat</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputid"  required  name="amountperseat">
+                        </div>
+                      </div>
+                     
+                        <!---<div class="form-group row">
+                        <label for="exampleInputqua" class="col-sm-3 col-form-label">Public key</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" required id="exampleInputid" name="public_key">
+                        </div>
+                      </div>
+                         <div class="form-group row">
+                        <label for="exampleInputqua" class="col-sm-3 col-form-label">Private key</label>
+                        <div class="col-sm-9">
+                          <input type="text" class="form-control" id="exampleInputid" required name="private_key">
+                        </div>
+                      </div>!-->
+
+                      <button type="submit" name="submit" class="btn btn-primary mr-2" >Submit</button>
+
+                    </form>
+                  </div>
+                </div>
+              </div></center>
+     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- content-wrapper ends -->
+          <!-- partial:partials/_footer.html -->
+          
+        <!-- main-panel ends -->
+      </div>
+      <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+ {% include 'admin/footer.html' %}
+
+    {% endblock %}

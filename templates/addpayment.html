@@ -1,0 +1,147 @@
+
+{% load static %}
+{% block content %}
+{% include 'header.html' %}
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>ADD PAYMENT</h2>
+                    </div>
+                    <div class="col-12">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Location Start -->
+       <center>
+                    <div class="col-lg-5">
+                        <div class="location-form">
+                            <form action="addpayments" method="POST">
+							  {% csrf_token %}
+{{form.as_p}}
+				
+								
+								<div class="control-group">
+                                    <input type="text" class="form-control" name="bustitle"  readonly value="{{res.bustitle}}"  readonly required="required" />
+                                </div>
+								
+								<br>
+								
+								
+								
+								                                <div class="control-group">
+                                    <input type="text" class="form-control" name="passengername" readonly value="{{res.passenger_firstname}}"  required="required" />
+                                </div>
+								
+																<br>
+
+								
+								                                <div class="control-group">
+                                    <input type="text" class="form-control" name="noof_paasenger" readonly value="{{res.passenger_lastname}}"  required="required" />
+                                </div>
+																<br>
+
+								
+								                                <div class="control-group">Date
+                                    <input type="date" class="form-control" name="date" placeholder="date" required="required" />
+                                </div>
+								<br>
+
+								
+								
+								                                <div class="control-group">
+                                    <input type="text" class="form-control" name="payment_type" placeholder="Payment type" required="required" />
+                                </div>
+																<br>
+
+								                                
+								                                <div class="control-group">
+                                    <input type="text" class="form-control" name="ccvno" placeholder="Card Number" required="required" />
+                                </div>
+																<br>
+
+								
+								
+								                                <div class="control-group">
+                                    <input type="text" class="form-control" name="cardno" placeholder="CVV" required="required" />
+                                </div>
+								
+																<br>
+
+								
+								                                <div class="control-group">Expiry date
+                                    <input type="date" class="form-control" name="expdate" placeholder="expdate" required="required" />
+                                </div>
+								
+																<br>
+
+								<div class="control-group">
+                                    <input type="text" class="form-control" name="amount" value="{{res.amount}}" readonly placeholder="amount" required="required" />
+                                </div>
+																<br>
+
+								
+								<div class="control-group">
+                                    <input type="hidden" class="form-control" name="status" value="paid" placeholder="status" required="required" />
+                                </div>								<br>
+
+								
+								<div class="control-group">
+                                    <input type="hidden" class="form-control" name="uid" value="{{res3}}" placeholder="status" required="required" />
+                                </div>
+                               
+																<br>
+
+								
+						
+                                
+                                <div>
+                                    <button class="btn btn-custom" type="submit">Pay</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div></center>
+                </div>
+            </div>
+        </div>
+        <!-- Location End -->
+        
+        
+        <!-- Footer Start -->
+       {% include 'footer.html' %}
+        <!-- Footer End -->
+        
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'mail/contact.js '%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
+{% endblock %}
